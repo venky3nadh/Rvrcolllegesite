@@ -1,0 +1,32 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+{# Display a form #}
+<center>
+<form action="" method="post" class="form">
+  {% csrf_token %}
+  {% bootstrap_form form  layout="horizontal" %}
+  <!--{{ form }}-->
+  </br>
+  {% buttons %}
+   <button submit="submit" class="btn btn-primary">
+    	Submit
+      <!--{% bootstrap_icon "star" %} Submit -->
+    </button>
+  {% endbuttons %}
+</form>
+</center>
+</body>
+</html>
